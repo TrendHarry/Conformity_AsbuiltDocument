@@ -49,8 +49,8 @@ def main():
             'Count of Users': user_count
         })
 
-    current_utc_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
-    file_name = f'RoleConformityAccess_{current_date_utc}.csv'
+    current_utc_time = datetime.utcnow().strftime('%Y%m%d%H%M%S')
+    file_name = f'RoleConformityAccess_{current_utc_time}.csv'
     with open(file_name, 'w', newline='', encoding='utf-8') as file:
         writer = csv.DictWriter(file, fieldnames=['Role', 'Conformity Access', 'Count of Users'])
         writer.writeheader()
